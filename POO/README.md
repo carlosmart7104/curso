@@ -65,7 +65,7 @@ Los archivos .h son compilados sin supervición, dejando indicado aquello que no
 El comando de compilación de una clase es:
 
 ```batch
-g++ <nombre_clase>.cpp -o clase.o 
+g++ -c <nombre_clase>.cpp -o clase.o 
 ```
 
 Es necesario incluir el archivo .h en el .cpp para que el linker funcione posteriormente.
