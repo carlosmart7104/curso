@@ -58,13 +58,17 @@ A este archivo se le conoce como el archivo de cabecera (header), contiene la mi
 Este archivo contiene de una forma más extensa la definicion de como funciona cada uno de los métodos de la clase dada, incluye el archivo de cabecera y las librerias necesarias,
 lo que permite que pueda ser compilado individualmente.
 
-##Compilar una clase.cpp
+Los archivos .h son compilados sin supervición, dejando indicado aquello que no se pudo compilar completamente, esto permite compilar las librerias por separado aun que sus funciones todavia no sean invocadas en un programa, y a los programas les permite compilar por separado sin supervisar que las funciones necesarias esten correctamente definidas en el archivo fuente de la libreria. Lo que ahorra tiempo de compilación, pero requiere tener un mayor cuidado a la hora de crear y usar nuestras librerias.
+
+##Compilar una clase
 
 El comando de compilación de una clase es:
 
 ```batch
 g++ <nombre_clase>.cpp -o clase.o 
 ```
+
+Es necesario incluir el archivo .h en el .cpp para que el linker funcione posteriormente.
 
 El resultado será un archivo de código objeto (ensamblador) listo para ser enlazado con nuestro programa principal y generar un ejecutable.
 Debe generar todos los .o de cada clase antes de compilar el programa principal.
