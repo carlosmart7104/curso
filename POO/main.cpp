@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
 	// Se crea una instancia  de "Empleado" dentro de una variable de la clase Persona
 	// Esto es posible ya que en "Empleado" hay clases suficientes para llenar los datos de "Persona"
 	// Y resulta muy util a la hora de acceder a diversos objetos dese una sola estructura o funcion
-	Persona* p4 = new Estudiante("Alejandro", 20); 
+	Persona* p4 = new Estudiante("Alejandro", 20, 9); 
 	cout << "Nombre: " << p4->getName() << endl
 	<< "Tipo: " << p4->getType() << endl << endl;
 
