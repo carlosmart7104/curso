@@ -19,6 +19,9 @@ y en cada una de ellas se puede llamar al método "decirNombre", y dirá el que 
 Por lo tanto podemos concluir que una clase actua como una plantilla que describe todos los elementos de un objeto, y una instancia es un objeto en si mismo, 
 por lo que a menudo los autores suelen usar los tres terminos (o al menos dos de ellos) indistintamente.
 
+###Constructor y destructor
+Son un par de funciones miembro o métodos de un objeto que deben ser definidos en su clase (de no hacerlo un compilador moderno los creará por defecto), como su nombre lo indica, el constructor es una funcion que se ejecuta al crear una instancia, y el destructor al eliminarla, por lo tanto, el constructor recibe los parametros con los que se crea el objeto (el constructor por defecto no requiere parametros) y luego realiza las primeras acciones del mimo, el destructor por su parte, no recibe parametros en ningun caso, pero suele usarse para liberar la memoria dinamica apartada. 
+
 ##Encapsulamiento
 
 Se conoce así a la capacidad de un objeto de ocultar ciertos metodos y atributos o mantenerlos "privados" solo para su propio uso y funcionamiento interno,
@@ -67,6 +70,8 @@ El resultado será un archivo de código objeto (ensamblador) listo para ser enl
 Debe generar todos los .o de cada clase antes de compilar el programa principal.
 
 ##Compilación final
+
+Para la compilación final, es necesario incluir en el código principal los archivos de cabecera de cada clase, para que el linker pueda enlazarlo con los archivos .o, en el caso de las librerias por estandar el .o esto ultimo no se nota por que el compilador busca el .o en su hubicación por defecto.
 
 El comando para compilar el programa principal incluyedo las clases previamente compiladas es:
 
